@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Account - Bazario</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- bootstrap css -->
+    <link href="assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- dm sans font family -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/logo.png" type="image/x-icon">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <!-- Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <a href="#" class="btn btn-pink rounded-circle position-fixed end-0 bottom-0 z-3 me-3 m-md-5 gotop fs-5"><i
+            class="fas fa-arrow-up"></i></a>
+    <header>
+        <div class="bg-pink">
+            <div class="container">
+                <div class="flex-wrap align-items-center justify-content-between fs-nm d-none py-2 d-md-flex">
+                    <p class="m-0">Hello, <strong>Guest!</strong> Welcome to
+                        <strong>Bazario</strong>&nbsp;&nbsp;|&nbsp;&nbsp;info@bazario.com
+                    </p>
+                    <div class="d-flex align-items-center">
+                        <select id="languageSelect" class="form-select" style="width: 100%;">
+                            <option value="PK" selected>English</option>
+                            <option value="IN">French</option>
+                            <option value="US">Spain</option>
+                            <option value="SA">German</option>
+                        </select>
+                        <span class="text-white mx-1">|</span>
+                        <select id="currencySelect" class="form-select" style="width: 100%;">
+                            <option value="pkr" selected>PKR</option>
+                            <option value="inr">INR</option>
+                            <option value="yan">YAN</option>
+                            <option value="usd">USD</option>
+                        </select>
+                        <span class="text-white ms-1">|</span>
+                        <a href="login.html" class="me-2 ms-3 text-decoration-none text-white text-nowrap">Sign In</a> /
+                        <a href="register.html" class="ms-2 text-decoration-none text-white text-nowrap">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="flex-wrap align-items-center justify-content-between fs-nm d-none d-md-flex">
+                <div class="text-center">
+                    <a href="index.html" class="text-decoration-none"><img src="assets/images/logo/logo.png" alt="logo"
+                            width="55" height="58" class="me-1">
+                        <h5 class="m-0 fw-bld text-pink">Bazario</h5>
+                    </a>
+                </div>
+                <form action="">
+                    <div class="input-group" style="width: 550px;">
+                        <span class="input-group-text rounded-0 bg-transparent">
+                            <select class="form-select bg-transparent border-0 rounded-0">
+                                <option value="" selected>All Categories</option>
+                                <option value="">Accessories</option>
+                                <option value="">Women Fashion</option>
+                                <option value="">Grocery</option>
+                                <option value="">Men Fashion</option>
+                            </select>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search product here...">
+                        <button
+                            class="input-group-text rounded-0 text-decoration-none btn-pink border-0 border-pink px-3"><i
+                                class="fas fa-search fs-5"></i></button>
+                    </div>
+                </form>
+                <div class="d-md-none d-lg-flex align-items-center">
+                    <img src="assets/images/common/mobile-shopping.png" alt="" width="55px" height="55px" class="me-2">
+                    <div class="fs-nm">
+                        <p class="text-blue fw-bold m-0">Free Call Us</p>
+                        <p class="text-secondary m-0">+93 323 232325</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fs-nm border-top border-bottom d-none d-md-block" id="navbar">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <span class="navbar-toggler border-0" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </span>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="shop.html">Shop</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="my-account.html">My Account</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <button class="btn btn-pink d-flex align-items-center" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#cart" aria-controls="offcanvasRight">
+                            <i class="fas fa-shopping-basket me-2"></i>
+                            <p class="m-0 me-2 fw-bold">My Cart</p>
+                            <span
+                                class="rounded-1 bg-blue fs-sm d-flex align-items-center justify-content-center sm-badge">23</span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <div class="offcanvas offcanvas-end overflow-y-auto" tabindex="-1" id="cart"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="d-flex align-items-start justify-content-between m-3 border-bottom py-1">
+                    <div>
+                        <h5 class="offcanvas-title fw-bold mb-2" id="offcanvasRightLabel">Shopping Cart</h5>
+                        <p class="text-secondary">Clothing and fashion products are limited.</p>
+                    </div>
+                    <button type="button" class="btn rounded-circle btn-pink" data-bs-dismiss="offcanvas"
+                        aria-label="Close"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="m-3 mt-0">
+                    <div class="card border-0 rounded-0 mb-3 border-bottom pb-2" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <img src="assets/images/catalog/dress-1.jpg" alt="product image" width="100"
+                                    height="150">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body fs-nm">
+                                    <p class="card-title fw-bold text-capitalize mb-2">Ladies Summer Shirt</p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Color : <span
+                                            class="text-secondary fw-normal">Brown</span></p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Price : <span
+                                            class="text-secondary fw-normal"> $125.00 &nbsp;<del>$140.00</del></span>
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                        <input class="inc-dec form-control w-25" type="text" value="1" />
+                                        <a href="#" class="btn btn-pink rounded-circle ms-2"><i
+                                                class="fas fa-trash-alt fs-nm"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 rounded-0 mb-3 border-bottom pb-2" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <img src="assets/images/catalog/dress-4.jpg" alt="product image" width="100"
+                                    height="150">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body fs-nm">
+                                    <p class="card-title fw-bold text-capitalize mb-2">Elegant Black Frock</p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Color : <span
+                                            class="text-secondary fw-normal">Black</span></p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Price : <span
+                                            class="text-secondary fw-normal"> $180.00 &nbsp;<del>$200.00</del></span>
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                        <input class="inc-dec form-control w-25" type="text" value="1" />
+                                        <a href="#" class="btn btn-pink rounded-circle ms-2"><i
+                                                class="fas fa-trash-alt fs-nm"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 rounded-0 mb-3 border-bottom pb-2" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <img src="assets/images/catalog/dress-19.jpg" alt="product image" width="100"
+                                    height="150">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body fs-nm">
+                                    <p class="card-title fw-bold text-capitalize mb-2">Elegant Black Frock</p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Color : <span
+                                            class="text-secondary fw-normal">Black</span></p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Price : <span
+                                            class="text-secondary fw-normal"> $180.00 &nbsp;<del>$200.00</del></span>
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                        <input class="inc-dec form-control w-25" type="text" value="1" />
+                                        <a href="#" class="btn btn-pink rounded-circle ms-2"><i
+                                                class="fas fa-trash-alt fs-nm"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between text-black mb-1">
+                        <span>Sub Total:</span>
+                        <strong>$240.00</strong>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between text-black mb-1">
+                        <span>Total:</span>
+                        <strong>$240.00</strong>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <a href='cart.html' class="btn btn-pink me-1">View Cart</a>
+                        <a href='checkout.html' class="btn btn-pink">Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile nav start -->
+        <div class="fs-nm border-top border-bottom d-flex align-items-center justify-content-between px-2 d-md-none py-2"
+            id="mob-nav">
+            <button class="btn text-secondary border-f fw-lighter rounded-1 px-2 canvas-btn" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                <i class="fas fa-stream fs-5 d-block"></i>
+            </button>
+            <div>
+                <a href="index.html" class="text-decoration-none d-flex align-items-center"><img
+                        src="assets/images/logo/logo.png" alt="logo" width="47" height="50" class="me-1">
+                    <h3 class="m-0 fw-bld text-pink">Bazario</h3>
+                </a>
+            </div>
+            <div>
+                <a href="account.html" class="text-decoration-none text-secondary"><i class="far fa-user fs-lg"></i></a>
+                <a class="btn rounded-0 text-secondary p-2" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#cart1" aria-controls="offcanvasRight">
+                    <i class="fas fa-cart-arrow-down fs-lg"></i>
+                </a>
+            </div>
+
+            <div class="offcanvas offcanvas-end overflow-y-auto" tabindex="-1" id="cart1"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="d-flex align-items-start justify-content-between m-3 border-bottom py-1">
+                    <div>
+                        <h5 class="offcanvas-title fw-bold mb-2" id="offcanvasRightLabel">Shopping Cart</h5>
+                        <p class="text-secondary">Clothing and fashion products are limited.</p>
+                    </div>
+                    <button type="button" class="btn rounded-circle btn-pink" data-bs-dismiss="offcanvas"
+                        aria-label="Close"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="m-3 mt-0">
+                    <div class="card border-0 rounded-0 mb-3 border-bottom pb-2" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <img src="assets/images/catalog/dress-1.jpg" alt="product image" width="100"
+                                    height="150">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body fs-nm">
+                                    <p class="card-title fw-bold text-capitalize mb-2">Ladies Summer Shirt</p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Color : <span
+                                            class="text-secondary fw-normal">Brown</span></p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Price : <span
+                                            class="text-secondary fw-normal"> $125.00 &nbsp;<del>$140.00</del></span>
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                        <input class="inc-dec form-control w-25" type="text" value="1" />
+                                        <a href="#" class="btn btn-pink rounded-circle ms-2"><i
+                                                class="fas fa-trash-alt fs-nm"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 rounded-0 mb-3 border-bottom pb-2" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <img src="assets/images/catalog/dress-4.jpg" alt="product image" width="100"
+                                    height="150">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body fs-nm">
+                                    <p class="card-title fw-bold text-capitalize mb-2">Elegant Black Frock</p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Color : <span
+                                            class="text-secondary fw-normal">Black</span></p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Price : <span
+                                            class="text-secondary fw-normal"> $180.00 &nbsp;<del>$200.00</del></span>
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                        <input class="inc-dec form-control w-25" type="text" value="1" />
+                                        <a href="#" class="btn btn-pink rounded-circle ms-2"><i
+                                                class="fas fa-trash-alt fs-nm"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 rounded-0 mb-3 border-bottom pb-2" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <img src="assets/images/catalog/dress-19.jpg" alt="product image" width="100"
+                                    height="150">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body fs-nm">
+                                    <p class="card-title fw-bold text-capitalize mb-2">Elegant Black Frock</p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Color : <span
+                                            class="text-secondary fw-normal">Black</span></p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Price : <span
+                                            class="text-secondary fw-normal"> $180.00 &nbsp;<del>$200.00</del></span>
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                        <input class="inc-dec form-control w-25" type="text" value="1" />
+                                        <a href="#" class="btn btn-pink rounded-circle ms-2"><i
+                                                class="fas fa-trash-alt fs-nm"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between text-black mb-1">
+                        <span>Sub Total:</span>
+                        <strong>$240.00</strong>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between text-black mb-1">
+                        <span>Total:</span>
+                        <strong>$240.00</strong>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <button class="btn btn-pink me-1">View Cart</button>
+                        <button class="btn btn-pink">Checkout</button>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+                aria-labelledby="staticBackdropLabel">
+                <div class="mx-2">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-4"
+                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <div class="py-3 border-bottom">
+                        <a href="index.html" class="text-decoration-none d-flex align-items-center"><img
+                                src="assets/images/logo/logo.png" alt="logo" width="47" height="50" class="me-1">
+                            <h3 class="m-0 fw-bld text-pink">Bazario</h3>
+                        </a>
+                    </div>
+                    <div class="my-3">
+                        <ul class="navbar-nav">
+                            <table class="side-nav">
+                                <tr>
+                                    <td style="width: 30px;" class="text-pink"><i class="fas fa-home"></i></td>
+                                    <td> <a class="nav-link active fw-bold" href="index.html">Home</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30px;" class="text-pink"><i class="fas fa-store"></i></td>
+                                    <td> <a class="nav-link fw-bold" href="about.html">About Us</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30px;" class="text-pink"><i class="fas fa-store-alt"></i></td>
+                                    <td> <a class="nav-link fw-bold" href="shop.html">Shop</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30px;" class="text-pink"><i class="far fa-user"></i></td>
+                                    <td> <a class="nav-link fw-bold" href="about.html">My Account</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30px;" class="text-pink"><i class="fas fa-blog"></i></td>
+                                    <td> <a class="nav-link fw-bold" href="blog.html">Blog</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30px;" class="text-pink"><i class="fas fa-phone-volume"></i></td>
+                                    <td><a class="nav-link fw-bold" href="contact.html">Contact</a></td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile nav end -->
+    </header>
+
+    <section>
+        <div class="top-bann d-flex align-items-center">
+            <div class="inner-img"
+                style="background-image: url('assets/images/bann-3.webp'); background-position: top;"></div>
+            <div class="container text">
+                <h2 class="fw-bold">MY ACCOUNT</h2>
+                <p class="text-pink fw-bold fs-lg">Home <span class="text-white">/</span> My Account</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row my-3">
+                <div class="col-12">
+                    <h4 class="py-3">Hello, <span class="text-pink fw-bold">Guest! </span>Welcome to your account
+                        dashboard.</h4>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <div class="card rounded-0 border-t border-b">
+                        <ul class="nav nav-tabs flex-row flex-lg-column" id="myTab" role="tablist">
+                            <li class="nav-item py-1" role="presentation">
+                                <button class="nav-link active fw-light w-100 text-start border-bottom a-pink"
+                                    id="order-tab" data-bs-toggle="tab" data-bs-target="#order-tab-pane" type="button"
+                                    role="tab" aria-controls="order-tab-pane" aria-selected="true">Order Management
+                                </button>
+                            </li>
+                            <li class="nav-item pb-1" role="presentation">
+                                <button class="nav-link fw-light a-pink" id="return-tab" data-bs-toggle="tab"
+                                    data-bs-target="#return-tab-pane" type="button" role="tab"
+                                    aria-controls="return-tab-pane" aria-selected="false">Return / Exchange</button>
+                            </li>
+                            <li class="nav-item pb-1" role="presentation">
+                                <button class="nav-link fw-light a-pink" id="profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">Profile / Manage
+                                    Address</button>
+                            </li>
+                            <li class="nav-item pb-1" role="presentation">
+                                <button class="nav-link fw-light a-pink" id="transaction-tab" data-bs-toggle="tab"
+                                    data-bs-target="#transaction-tab-pane" type="button" role="tab"
+                                    aria-controls="transaction-tab-pane" aria-selected="false">Transaction
+                                    History</button>
+                            </li>
+                            <li class="nav-item pb-1" role="presentation">
+                                <button class="nav-link fw-light a-pink" id="wishlist-tab" data-bs-toggle="tab"
+                                    data-bs-target="#wishlist-tab-pane" type="button" role="tab"
+                                    aria-controls="wishlist-tab-pane" aria-selected="false">Wishlist /
+                                    Saved</button>
+                            </li>
+                            <li class="nav-item pb-1" role="presentation">
+                                <button class="nav-link fw-light a-pink" id="notify-tab" data-bs-toggle="tab"
+                                    data-bs-target="#notify-tab-pane" type="button" role="tab"
+                                    aria-controls="notify-tab-pane" aria-selected="false">Notification</button>
+                            </li>
+                            <li class="nav-item pb-1" role="presentation">
+                                <button class="nav-link fw-light a-pink" id="paymant-tab" data-bs-toggle="tab"
+                                    data-bs-target="#paymant-tab-pane" type="button" role="tab"
+                                    aria-controls="paymant-tab-pane" aria-selected="false">Recurring
+                                    Payment</button>
+                            </li>
+                            <li class="nav-item pb-1" role="presentation">
+                                <button class="nav-link fw-light a-pink" id="wallet-tab" data-bs-toggle="tab"
+                                    data-bs-target="#wallet-tab-pane" type="button" role="tab"
+                                    aria-controls="wallet-tab-pane" aria-selected="false">Wallet Section</button>
+                            </li>
+                            <li class="nav-item py-1" role="presentation">
+                                <button class="nav-link fw-light a-pink" id="invoices-tab" data-bs-toggle="tab"
+                                    data-bs-target="#invoices-tab-pane" type="button" role="tab"
+                                    aria-controls="invoices-tab-pane" aria-selected="false">Downloadable
+                                    Invoices</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9 mb-3">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="order-tab-pane" role="tabpanel"
+                            aria-labelledby="order-tab" tabindex="0">
+                            <p class="fw-bold">Your Order History:</p>
+                            <div class="table-responsive">
+                                <table
+                                    class="table table-bordered table-hover table-striped text-nowrap text-center align-middle">
+                                    <thead class="table-danger">
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Date</th>
+                                            <th>Items</th>
+                                            <th>Total</th>
+                                            <th>Payment Status</th>
+                                            <th>Order Status</th>
+                                            <th>Tracking Status</th>
+                                            <th>ETA</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#1001</td>
+                                            <td>2025-04-15</td>
+                                            <td><a href="shop.html" class="a-pink text-decoration-none">1x Hoodie</a>
+                                            </td>
+                                            <td>Rs. 2,500</td>
+                                            <td>Paid</td>
+                                            <td>Shipped</td>
+                                            <td>Out for delivery</td>
+                                            <td>2025-04-22</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1002</td>
+                                            <td>2025-04-12</td>
+                                            <td><a href="shop.html" class="a-pink text-decoration-none">3x Mugs</a></td>
+                                            <td>Rs. 1,200</td>
+                                            <td>Paid</td>
+                                            <td>Delivered</td>
+                                            <td>Delivered on Apr 18</td>
+                                            <td>—</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1003</td>
+                                            <td>2025-04-10</td>
+                                            <td><a href="shop.html" class="a-pink text-decoration-none">1x Hoodie</a>
+                                            </td>
+                                            <td>Rs. 3,000</td>
+                                            <td>Pending</td>
+                                            <td>Processing</td>
+                                            <td>Preparing for dispatch</td>
+                                            <td>2025-04-25</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1004</td>
+                                            <td>2025-04-09</td>
+                                            <td><a href="shop.html" class="a-pink text-decoration-none">2x T-shirt</a>
+                                            </td>
+                                            <td>Rs. 2,000</td>
+                                            <td>Paid</td>
+                                            <td>Cancelled</td>
+                                            <td>Order Cancelled</td>
+                                            <td>—</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1005</td>
+                                            <td>2025-04-08</td>
+                                            <td><a href="shop.html" class="a-pink text-decoration-none">1x Hoodie</a>
+                                            </td>
+                                            <td>Rs. 500</td>
+                                            <td>Paid</td>
+                                            <td>Delivered</td>
+                                            <td>Delivered on Apr 14</td>
+                                            <td>—</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1006</td>
+                                            <td>2025-04-07</td>
+                                            <td><a href="shop.html" class="a-pink text-decoration-none">1x Hoodie</a>
+                                            </td>
+                                            <td>Rs. 2,800</td>
+                                            <td>Paid</td>
+                                            <td>Shipped</td>
+                                            <td>In transit</td>
+                                            <td>2025-04-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1007</td>
+                                            <td>2025-04-05</td>
+                                            <td><a href="shop.html" class="a-pink text-decoration-none">1x Hoodie</a>
+                                            </td>
+                                            <td>Rs. 1,500</td>
+                                            <td>Failed</td>
+                                            <td>Cancelled</td>
+                                            <td>Payment Failed</td>
+                                            <td>—</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1006</td>
+                                            <td>2025-04-07</td>
+                                            <td><a href="shop.html" class="a-pink text-decoration-none">1x Hoodie</a>
+                                            </td>
+                                            <td>Rs. 2,800</td>
+                                            <td>Paid</td>
+                                            <td>Shipped</td>
+                                            <td>In transit</td>
+                                            <td>2025-04-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1007</td>
+                                            <td>2025-04-05</td>
+                                            <td><a href="shop.html" class="a-pink text-decoration-none">1x Hoodie</a>
+                                            </td>
+                                            <td>Rs. 1,500</td>
+                                            <td>Failed</td>
+                                            <td>Cancelled</td>
+                                            <td>Payment Failed</td>
+                                            <td>—</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="return-tab-pane" role="tabpanel" aria-labelledby="return-tab"
+                            tabindex="0">
+                            <p class="fw-bold">Your Returns & Exchanges:</p>
+                            <div class="table-responsive">
+                                <table
+                                    class="table table-bordered table-hover table-striped text-nowrap text-center align-middle">
+                                    <thead class="table-danger">
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Date</th>
+                                            <th>Items</th>
+                                            <th>Total</th>
+                                            <th>Payment Status</th>
+                                            <th>Order Status</th>
+                                            <th>Return Type</th>
+                                            <th>Return Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#1001</td>
+                                            <td>2025-04-15</td>
+                                            <td><a href="shop.html" class="a-pink text-decoration-none">1x Hoodie</a>
+                                            </td>
+                                            <td>Rs. 2,500</td>
+                                            <td>Paid</td>
+                                            <td>Delivered</td>
+                                            <td>Return</td>
+                                            <td>Pending Approval</td>
+                                            <td>View Details</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1002</td>
+                                            <td>2025-04-12</td>
+                                            <td><a href="shop.html" class="a-pink text-decoration-none">3x Mugs</a></td>
+                                            <td>Rs. 1,200</td>
+                                            <td>Paid</td>
+                                            <td>Delivered</td>
+                                            <td>Exchange</td>
+                                            <td>In Process</td>
+                                            <td>Track Exchange</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1003</td>
+                                            <td>2025-04-10</td>
+                                            <td><a href="shop.html" class="a-pink text-decoration-none">1x Hoodie</a>
+                                            </td>
+                                            <td>Rs. 3,000</td>
+                                            <td>Pending</td>
+                                            <td>Processing</td>
+                                            <td>—</td>
+                                            <td>Not Eligible</td>
+                                            <td>—</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1004</td>
+                                            <td>2025-04-09</td>
+                                            <td><a href="shop.html" class="a-pink text-decoration-none">2x T-shirt</a>
+                                            </td>
+                                            <td>Rs. 2,000</td>
+                                            <td>Paid</td>
+                                            <td>Cancelled</td>
+                                            <td>—</td>
+                                            <td>Not Eligible</td>
+                                            <td>—</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1005</td>
+                                            <td>2025-04-08</td>
+                                            <td><a href="shop.html" class="a-pink text-decoration-none">1x Hoodie</a>
+                                            </td>
+                                            <td>Rs. 500</td>
+                                            <td>Paid</td>
+                                            <td>Delivered</td>
+                                            <td>Return</td>
+                                            <td>Approved</td>
+                                            <td>Download Return Label</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1006</td>
+                                            <td>2025-04-07</td>
+                                            <td><a href="shop.html" class="a-pink text-decoration-none">1x Hoodie</a>
+                                            </td>
+                                            <td>Rs. 2,800</td>
+                                            <td>Paid</td>
+                                            <td>Shipped</td>
+                                            <td>—</td>
+                                            <td>Not Eligible</td>
+                                            <td>—</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1007</td>
+                                            <td>2025-04-05</td>
+                                            <td><a href="shop.html" class="a-pink text-decoration-none">1x Hoodie</a>
+                                            </td>
+                                            <td>Rs. 1,500</td>
+                                            <td>Failed</td>
+                                            <td>Cancelled</td>
+                                            <td>—</td>
+                                            <td>Not Eligible</td>
+                                            <td>—</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                            tabindex="0">
+                            <div class="row">
+                                <p class="fw-bold">Your Order History:</p>
+                                <!-- Basic Info -->
+                                <div class="col-md-6 col-lg-4 mb-3">
+                                    <div class="card shadow rounded-0 bodrer border-0 h-100">
+                                        <div class="card-body ">
+                                            <h5 class="card-title fw-bold">👤 Basic Info</h5>
+                                            <p class="mb-2">Name: <span class="text-secondary">John Doe</span></p>
+                                            <p class="mb-2">Email: <span class="text-secondary">guest@gmail.com</span>
+                                            </p>
+                                            <p class="mb-2">Name: <span class="text-secondary">John Doe</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Shipping Address -->
+                                <div class="col-md-6 col-lg-4 mb-3">
+                                    <div class="card shadow rounded-0 border-0 h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">🏠 Shipping Address</h5>
+                                            <p class="mb-2 text-secondary">123 Main Street,</p>
+                                            <p class="mb-2 text-secondary">Faisalabad, Punjab</p>
+                                            <p class="mb-2 text-secondary">Pakistan - 38000</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Order Summary -->
+                                <div class="col-md-6 col-lg-4 mb-3">
+                                    <div class="card shadow rounded-0 border-0 h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">📦 Order Summary</h5>
+                                            <p class="mb-2">Total Orders: <span class="text-secondary">13</span></p>
+                                            <p class="mb-2">Delivered: <span class="text-secondary">7</span></p>
+                                            <p class="mb-2">Cancelled: <span class="text-secondary">3</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Return Summary -->
+                                <div class="col-md-6 col-lg-4 mb-3">
+                                    <div class="card shadow rounded-0 border-0 h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">🔁 Return & Exchange</h5>
+                                            <p class="mb-2">Request: <span class="text-secondary">13</span></p>
+                                            <p class="mb-2">Approved: <span class="text-secondary">7</span></p>
+                                            <p class="mb-2">Pending: <span class="text-secondary">3</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Security Settings -->
+                                <div class="col-md-6 col-lg-4 mb-3">
+                                    <div class="card shadow rounded-0 border-0 h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">🔐 Security Settings</h5>
+                                            <p class="mb-2">Password: <span class="text-secondary">••••••••</span>
+                                            </p>
+                                            <p class="mb-2">Last Login: <span class="text-secondary"> Wed 25,
+                                                    2025</span></p>
+                                            <p class="mb-2">Reg. Email: <span
+                                                    class="text-secondary">guest@gmail.com</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Preferences -->
+                                <div class="col-md-6 col-lg-4 mb-3">
+                                    <div class="card shadow rounded-0 border-0 h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">⚙️ Preferences</h5>
+                                            <p class="mb-2">Email Notification: <span
+                                                    class="text-secondary">Enabled</span></p>
+                                            <p class="mb-2">Subscribe: <span class="text-secondary">Yes</span></p>
+                                            <p class="mb-2">SMS Notification: <span class="text-secondary">Yes</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="transaction-tab-pane" role="tabpanel"
+                            aria-labelledby="transaction-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="wishlist-tab-pane" role="tabpanel" aria-labelledby="wishlist-tab"
+                            tabindex="0">...</div>
+                        <div class="tab-pane fade" id="notify-tab-pane" role="tabpanel" aria-labelledby="notify-tab"
+                            tabindex="0">...</div>
+                        <div class="tab-pane fade" id="paymant-tab-pane" role="tabpanel" aria-labelledby="paymant-tab"
+                            tabindex="0">...</div>
+                        <div class="tab-pane fade" id="wallet-tab-pane" role="tabpanel" aria-labelledby="wallet-tab"
+                            tabindex="0">...</div>
+                        <div class="tab-pane fade" id="invoices-tab-pane" role="tabpanel" aria-labelledby="invoices-tab"
+                            tabindex="0">...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <h5 class="border-bottom pb-2">About Us</h5>
+                    <p class="small">Lorem ipsum dolor sit amet, consectetur adipisici ti elit seddo eiusmod tempor
+                        incididunt utlabore et dolore magna aliqua enim ad minim veniam quisnostrud exercitation ullamco
+                    </p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5 class="border-bottom pb-2">My Account</h5>
+                    <ul class="list-unstyled small">
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">My Account</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Shopping Cart</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Login</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Register</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Checkout</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Wishlist</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5 class="border-bottom pb-2">Categories</h5>
+                    <ul class="list-unstyled small">
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Portfolio</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Compare</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Frequently</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h5 class="border-bottom pb-2">Instagram</h5>
+                    <div class="row g-2">
+                        <div class="col-6 col-md-4"><img src="assets/images/catalog/dress-1.jpg" alt="" width="100%">
+                        </div>
+                        <div class="col-6 col-md-4"><img src="assets/images/catalog/dress-5.jpg" alt="" width="100%">
+                        </div>
+                        <div class="col-6 col-md-4"><img src="assets/images/catalog/dress-8.jpg" alt="" width="100%">
+                        </div>
+                        <div class="col-6 col-md-4"><img src="assets/images/catalog/dress-11.jpg" alt="" width="100%">
+                        </div>
+                        <div class="col-6 col-md-4"><img src="assets/images/catalog/dress-12.jpg" alt="" width="100%">
+                        </div>
+                        <div class="col-6 col-md-4"><img src="assets/images/catalog/dress-15.jpg" alt="" width="100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5 class="border-bottom pb-2">Newsletter</h5>
+                    <p class="small">Fill their seed open meat. Sea you great Saw image stl</p>
+                    <form>
+                        <div class="mb-2">
+                            <input type="email" class="form-control" placeholder="Email Address">
+                        </div>
+                        <button class="btn btn-pink w-100">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Bottom Section -->
+            <div class="border-top py-2 mt-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p class="small mb-2 mb-md-0">Copyright © 2025 <a href="index.html"
+                        class="text-decoration-none text-pink">Bazario</a>. All Rights Reserved.</p>
+                <div class="d-flex gap-2">
+                    <img src="assets/images/icon/payment-visa-card.png" alt="Visa" height="30" width="100%">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/jquery.js"></script>
+    <script src="assets/libs/inc-dec-counter/userincr.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</body>
+
+</html>

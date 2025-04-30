@@ -1,0 +1,1123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Details - Bazario</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- bootstrap css -->
+    <link href="assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- dm sans font family -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/logo.png" type="image/x-icon">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <!-- magiczoomplus css -->
+    <link rel="stylesheet" href="assets/libs/magiczoomplus/magiczoomplus.css">
+    <!-- Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <style>
+        ul {
+            list-style-type: "->";
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="btn btn-pink rounded-circle position-fixed end-0 bottom-0 z-3 me-3 m-md-5 gotop fs-5"><i
+            class="fas fa-arrow-up"></i></a>
+    <header>
+        <div class="bg-pink">
+            <div class="container">
+                <div class="flex-wrap align-items-center justify-content-between fs-nm d-none py-2 d-md-flex">
+                    <p class="m-0">Hello, <strong>Guest!</strong> Welcome to
+                        <strong>Bazario</strong>&nbsp;&nbsp;|&nbsp;&nbsp;info@bazario.com
+                    </p>
+                    <div class="d-flex align-items-center">
+                        <select id="languageSelect" class="form-select" style="width: 100%;">
+                            <option value="PK" selected>English</option>
+                            <option value="IN">French</option>
+                            <option value="US">Spain</option>
+                            <option value="SA">German</option>
+                        </select>
+                        <span class="text-white mx-1">|</span>
+                        <select id="currencySelect" class="form-select" style="width: 100%;">
+                            <option value="pkr" selected>PKR</option>
+                            <option value="inr">INR</option>
+                            <option value="yan">YAN</option>
+                            <option value="usd">USD</option>
+                        </select>
+                        <span class="text-white ms-1">|</span>
+                        <a href="login.html" class="me-2 ms-3 text-decoration-none text-white text-nowrap">Sign In</a> /
+                        <a href="register.html" class="ms-2 text-decoration-none text-white text-nowrap">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="flex-wrap align-items-center justify-content-between fs-nm d-none d-md-flex">
+                <div class="text-center">
+                    <a href="index.html" class="text-decoration-none"><img src="assets/images/logo/logo.png" alt="logo"
+                            width="55" height="58" class="me-1">
+                        <h5 class="m-0 fw-bld text-pink">Bazario</h5>
+                    </a>
+                </div>
+                <form action="">
+                    <div class="input-group" style="width: 550px;">
+                        <span class="input-group-text rounded-0 bg-transparent">
+                            <select class="form-select bg-transparent border-0 rounded-0">
+                                <option value="" selected>All Categories</option>
+                                <option value="">Accessories</option>
+                                <option value="">Women Fashion</option>
+                                <option value="">Grocery</option>
+                                <option value="">Men Fashion</option>
+                            </select>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search product here...">
+                        <button
+                            class="input-group-text rounded-0 text-decoration-none btn-pink border-0 border-pink px-3"><i
+                                class="fas fa-search fs-5"></i></button>
+                    </div>
+                </form>
+                <div class="d-md-none d-lg-flex align-items-center">
+                    <img src="assets/images/common/mobile-shopping.png" alt="" width="55px" height="55px" class="me-2">
+                    <div class="fs-nm">
+                        <p class="text-blue fw-bold m-0">Free Call Us</p>
+                        <p class="text-secondary m-0">+93 323 232325</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fs-nm border-top border-bottom d-none d-md-block" id="navbar">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <span class="navbar-toggler border-0" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </span>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="shop.html">Shop</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="my-account.html">My Account</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <button class="btn btn-pink d-flex align-items-center" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#cart" aria-controls="offcanvasRight">
+                            <i class="fas fa-shopping-basket me-2"></i>
+                            <p class="m-0 me-2 fw-bold">My Cart</p>
+                            <span
+                                class="rounded-1 bg-blue fs-sm d-flex align-items-center justify-content-center sm-badge">23</span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <div class="offcanvas offcanvas-end overflow-y-auto" tabindex="-1" id="cart"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="d-flex align-items-start justify-content-between m-3 border-bottom py-1">
+                    <div>
+                        <h5 class="offcanvas-title fw-bold mb-2" id="offcanvasRightLabel">Shopping Cart</h5>
+                        <p class="text-secondary">Clothing and fashion products are limited.</p>
+                    </div>
+                    <button type="button" class="btn rounded-circle btn-pink" data-bs-dismiss="offcanvas"
+                        aria-label="Close"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="m-3 mt-0">
+                    <div class="card border-0 rounded-0 mb-3 border-bottom pb-2" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <img src="assets/images/catalog/dress-1.jpg" alt="product image" width="100"
+                                    height="150">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body fs-nm">
+                                    <p class="card-title fw-bold text-capitalize mb-2">Ladies Summer Shirt</p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Color : <span
+                                            class="text-secondary fw-normal">Brown</span></p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Price : <span
+                                            class="text-secondary fw-normal"> $125.00 &nbsp;<del>$140.00</del></span>
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                        <input class="inc-dec form-control w-25" type="text" value="1" />
+                                        <a href="#" class="btn btn-pink rounded-circle ms-2"><i
+                                                class="fas fa-trash-alt fs-nm"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 rounded-0 mb-3 border-bottom pb-2" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <img src="assets/images/catalog/dress-4.jpg" alt="product image" width="100"
+                                    height="150">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body fs-nm">
+                                    <p class="card-title fw-bold text-capitalize mb-2">Elegant Black Frock</p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Color : <span
+                                            class="text-secondary fw-normal">Black</span></p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Price : <span
+                                            class="text-secondary fw-normal"> $180.00 &nbsp;<del>$200.00</del></span>
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                        <input class="inc-dec form-control w-25" type="text" value="1" />
+                                        <a href="#" class="btn btn-pink rounded-circle ms-2"><i
+                                                class="fas fa-trash-alt fs-nm"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 rounded-0 mb-3 border-bottom pb-2" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <img src="assets/images/catalog/dress-19.jpg" alt="product image" width="100"
+                                    height="150">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body fs-nm">
+                                    <p class="card-title fw-bold text-capitalize mb-2">Elegant Black Frock</p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Color : <span
+                                            class="text-secondary fw-normal">Black</span></p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Price : <span
+                                            class="text-secondary fw-normal"> $180.00 &nbsp;<del>$200.00</del></span>
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                        <input class="inc-dec form-control w-25" type="text" value="1" />
+                                        <a href="#" class="btn btn-pink rounded-circle ms-2"><i
+                                                class="fas fa-trash-alt fs-nm"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between text-black mb-1">
+                        <span>Sub Total:</span>
+                        <strong>$240.00</strong>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between text-black mb-1">
+                        <span>Total:</span>
+                        <strong>$240.00</strong>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <a href='cart.html' class="btn btn-pink me-1">View Cart</a>
+                        <a href='checkout.html' class="btn btn-pink">Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile nav start -->
+        <div class="fs-nm border-top border-bottom d-flex align-items-center justify-content-between px-2 d-md-none py-2"
+            id="mob-nav">
+            <button class="btn text-secondary border-f fw-lighter rounded-1 px-2 canvas-btn" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                <i class="fas fa-stream fs-5 d-block"></i>
+            </button>
+            <div>
+                <a href="index.html" class="text-decoration-none d-flex align-items-center"><img
+                        src="assets/images/logo/logo.png" alt="logo" width="47" height="50" class="me-1">
+                    <h3 class="m-0 fw-bld text-pink">Bazario</h3>
+                </a>
+            </div>
+            <div>
+                <a href="account.html" class="text-decoration-none text-secondary"><i class="far fa-user fs-lg"></i></a>
+                <a class="btn rounded-0 text-secondary p-2" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#cart1" aria-controls="offcanvasRight">
+                    <i class="fas fa-cart-arrow-down fs-lg"></i>
+                </a>
+            </div>
+
+            <div class="offcanvas offcanvas-end overflow-y-auto" tabindex="-1" id="cart1"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="d-flex align-items-start justify-content-between m-3 border-bottom py-1">
+                    <div>
+                        <h5 class="offcanvas-title fw-bold mb-2" id="offcanvasRightLabel">Shopping Cart</h5>
+                        <p class="text-secondary">Clothing and fashion products are limited.</p>
+                    </div>
+                    <button type="button" class="btn rounded-circle btn-pink" data-bs-dismiss="offcanvas"
+                        aria-label="Close"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="m-3 mt-0">
+                    <div class="card border-0 rounded-0 mb-3 border-bottom pb-2" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <img src="assets/images/catalog/dress-1.jpg" alt="product image" width="100"
+                                    height="150">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body fs-nm">
+                                    <p class="card-title fw-bold text-capitalize mb-2">Ladies Summer Shirt</p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Color : <span
+                                            class="text-secondary fw-normal">Brown</span></p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Price : <span
+                                            class="text-secondary fw-normal"> $125.00 &nbsp;<del>$140.00</del></span>
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                        <input class="inc-dec form-control w-25" type="text" value="1" />
+                                        <a href="#" class="btn btn-pink rounded-circle ms-2"><i
+                                                class="fas fa-trash-alt fs-nm"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 rounded-0 mb-3 border-bottom pb-2" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <img src="assets/images/catalog/dress-4.jpg" alt="product image" width="100"
+                                    height="150">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body fs-nm">
+                                    <p class="card-title fw-bold text-capitalize mb-2">Elegant Black Frock</p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Color : <span
+                                            class="text-secondary fw-normal">Black</span></p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Price : <span
+                                            class="text-secondary fw-normal"> $180.00 &nbsp;<del>$200.00</del></span>
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                        <input class="inc-dec form-control w-25" type="text" value="1" />
+                                        <a href="#" class="btn btn-pink rounded-circle ms-2"><i
+                                                class="fas fa-trash-alt fs-nm"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 rounded-0 mb-3 border-bottom pb-2" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <img src="assets/images/catalog/dress-19.jpg" alt="product image" width="100"
+                                    height="150">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body fs-nm">
+                                    <p class="card-title fw-bold text-capitalize mb-2">Elegant Black Frock</p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Color : <span
+                                            class="text-secondary fw-normal">Black</span></p>
+                                    <p class="card-title fw-bold text-capitalize mb-2">Price : <span
+                                            class="text-secondary fw-normal"> $180.00 &nbsp;<del>$200.00</del></span>
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                        <input class="inc-dec form-control w-25" type="text" value="1" />
+                                        <a href="#" class="btn btn-pink rounded-circle ms-2"><i
+                                                class="fas fa-trash-alt fs-nm"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between text-black mb-1">
+                        <span>Sub Total:</span>
+                        <strong>$240.00</strong>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between text-black mb-1">
+                        <span>Total:</span>
+                        <strong>$240.00</strong>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <a href="cart.html" class="btn btn-pink me-1">View Cart</a>
+                        <button class="btn btn-pink">Checkout</button>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+                aria-labelledby="staticBackdropLabel">
+                <div class="mx-2">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-4"
+                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <div class="py-3 border-bottom">
+                        <a href="index.html" class="text-decoration-none d-flex align-items-center"><img
+                                src="assets/images/logo/logo.png" alt="logo" width="47" height="50" class="me-1">
+                            <h3 class="m-0 fw-bld text-pink">Bazario</h3>
+                        </a>
+                    </div>
+                    <div class="my-3">
+                        <ul class="navbar-nav">
+                            <table class="side-nav">
+                                <tr>
+                                    <td style="width: 30px;" class="text-pink"><i class="fas fa-home"></i></td>
+                                    <td> <a class="nav-link active fw-bold" href="index.html">Home</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30px;" class="text-pink"><i class="fas fa-store"></i></td>
+                                    <td> <a class="nav-link fw-bold" href="about.html">About Us</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30px;" class="text-pink"><i class="fas fa-store-alt"></i></td>
+                                    <td> <a class="nav-link fw-bold" href="shop.html">Shop</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30px;" class="text-pink"><i class="far fa-user"></i></td>
+                                    <td> <a class="nav-link fw-bold" href="about.html">My Account</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30px;" class="text-pink"><i class="fas fa-blog"></i></td>
+                                    <td> <a class="nav-link fw-bold" href="blog.html">Blog</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30px;" class="text-pink"><i class="fas fa-phone-volume"></i></td>
+                                    <td><a class="nav-link fw-bold" href="contact.html">Contact</a></td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile nav end -->
+
+        <!-- start mob navigation -->
+        <div class="mob-nav">
+            <a href="index.html"
+                class="text-blue text-decoration-none d-flex flex-column justify-content-center align-items-center">
+                <i class="fas fa-user-shield mb-1"></i>
+                <span>Home</span>
+            </a>
+            <a href="shop.html"
+                class="text-blue active text-decoration-none d-flex flex-column justify-content-center align-items-center">
+                <i class="fas fa-eye mb-1"></i>
+                <span>Shop</span>
+            </a>
+            <div>
+                <a href="cart.html" class="btn btn-pink">Add to Cart</a>
+                <a href="checkout.html" class="btn btn-pink">Buy Now</a>
+            </div>
+        </div>
+        <!-- end mob navigation -->
+    </header>
+
+    <section>
+        <div class="top-bann d-flex align-items-center">
+            <div class="inner-img" style="background-image: url('assets/images/bann.webp');"></div>
+            <div class="container text">
+                <h2 class="fw-bold">PRODUCT DETAILS</h2>
+                <p class="text-pink fw-bold fs-lg">Home <span class="text-white">/</span> Product Details</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row my-3">
+                <!-- <div class="col-md-3 d-none d-lg-block">
+                    <div class="card border-0 shadow rounded-0">
+                        <div class="card-header rounded-0 bg-pink">
+                            <p class="m-0 fw-bold fs-lg py-1">Categories</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="accordion" id="accordionPanelsStayOpenExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button p-0 pb-3 bg-transparent border-bottom"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#cat1"
+                                            aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                            Women Fashion
+                                        </button>
+                                    </h2>
+                                    <div id="cat1" class="accordion-collapse collapse show pt-3 fs-nm">
+                                        <a href=""
+                                            class="text-decoration-none a-pink d-inline-block d-flex align-items-center justify-content-between pb-3">
+                                            <span>Linen Unstitched</span><i class="fas fa-arrow-right"></i></a>
+                                        <a href=""
+                                            class="text-decoration-none a-pink d-inline-block d-flex align-items-center justify-content-between pb-3 "><span>Khaddar
+                                                Stitched</span><i class="fas fa-arrow-right"></i></a>
+                                        <a href=""
+                                            class="text-decoration-none a-pink d-inline-block d-flex align-items-center justify-content-between pb-3 "><span>Stitched
+                                                Lawn</span><i class="fas fa-arrow-right"></i></a>
+                                        <a href=""
+                                            class="text-decoration-none a-pink d-inline-block d-flex align-items-center justify-content-between pb-3 "><span>Embroidered
+                                                Organza</span><i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button p-0 pt-3 pb-3 bg-transparent border-bottom"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#cat2"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Men Fashion and Wear
+                                        </button>
+                                    </h2>
+                                    <div id="cat2" class="accordion-collapse collapse show">
+                                        <div class="accordion-body px-0">
+                                            <a href=""
+                                                class="text-decoration-none a-pink d-inline-block d-flex align-items-center justify-content-between pb-3">
+                                                <span>Linen Unstitched</span><i class="fas fa-arrow-right"></i></a>
+                                            <a href=""
+                                                class="text-decoration-none a-pink d-inline-block d-flex align-items-center justify-content-between pb-3 "><span>Khaddar
+                                                    Stitched</span><i class="fas fa-arrow-right"></i></a>
+                                            <a href=""
+                                                class="text-decoration-none a-pink d-inline-block d-flex align-items-center justify-content-between pb-3 "><span>Stitched
+                                                    Lawn</span><i class="fas fa-arrow-right"></i></a>
+                                            <a href=""
+                                                class="text-decoration-none a-pink d-inline-block d-flex align-items-center justify-content-between pb-3 "><span>Embroidered
+                                                    Organza</span><i class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button
+                                            class="accordion-button collapsed p-0 pt-3 pb-3 bg-transparent border-bottom"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#cat3"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Kids Wear and shoes
+                                        </button>
+                                    </h2>
+                                    <div id="cat3" class="accordion-collapse collapse fs-nm">
+                                        <div class="accordion-body px-0">
+                                            <a href=""
+                                                class="text-decoration-none a-pink d-inline-block d-flex align-items-center justify-content-between pb-3">
+                                                <span>Linen Unstitched</span><i class="fas fa-arrow-right"></i></a>
+                                            <a href=""
+                                                class="text-decoration-none a-pink d-inline-block d-flex align-items-center justify-content-between pb-3 "><span>Khaddar
+                                                    Stitched</span><i class="fas fa-arrow-right"></i></a>
+                                            <a href=""
+                                                class="text-decoration-none a-pink d-inline-block d-flex align-items-center justify-content-between pb-3 "><span>Stitched
+                                                    Lawn</span><i class="fas fa-arrow-right"></i></a>
+                                            <a href=""
+                                                class="text-decoration-none a-pink d-inline-block d-flex align-items-center justify-content-between pb-3 "><span>Embroidered
+                                                    Organza</span><i class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button
+                                            class="accordion-button collapsed p-0 pt-3 pb-3 bg-transparent border-bottom"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#cat4"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Men Fashion and Wear
+                                        </button>
+                                    </h2>
+                                    <div id="cat4" class="accordion-collapse collapse">
+                                        <div class="accordion-body px-0">
+                                            <a href=""
+                                                class="text-decoration-none a-pink d-inline-block d-flex align-items-center justify-content-between pb-3">
+                                                <span>Linen Unstitched</span><i class="fas fa-arrow-right"></i></a>
+                                            <a href=""
+                                                class="text-decoration-none a-pink d-inline-block d-flex align-items-center justify-content-between pb-3 "><span>Khaddar
+                                                    Stitched</span><i class="fas fa-arrow-right"></i></a>
+                                            <a href=""
+                                                class="text-decoration-none a-pink d-inline-block d-flex align-items-center justify-content-between pb-3 "><span>Stitched
+                                                    Lawn</span><i class="fas fa-arrow-right"></i></a>
+                                            <a href=""
+                                                class="text-decoration-none a-pink d-inline-block d-flex align-items-center justify-content-between pb-3 "><span>Embroidered
+                                                    Organza</span><i class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-md-5 d-flex align-items-center justify-content-center">
+                            <div class="app-figure" id="zoom-fig">
+                                <a id="Zoom-1" class="MagicZoom"
+                                    title="Show your product in stunning detail with Magic Zoom Plus."
+                                    href="assets/images/catalog/dress-10.jpg?h=1400"
+                                    data-zoom-image-2x="assets/images/catalog/dress-10.jpg?h=2800"
+                                    data-image-2x="assets/images/catalog/dress-10.jpg?h=800">
+                                    <img src="assets/images/catalog/dress-10.jpg?h=400"
+                                        srcset="assets/images/catalog/dress-10.jpg?h=800 2x" alt="" />
+                                </a>
+                                <div class="selectors">
+                                    <a data-zoom-id="Zoom-1" href="assets/images/catalog/dress-10.jpg"
+                                        data-image="assets/images/catalog/dress-10.jpg"
+                                        data-zoom-image-2x="assets/images/catalog/dress-10.jpg"
+                                        data-image-2x="assets/images/catalog/dress-10.jpg">
+                                        <img srcset="assets/images/catalog/dress-10.jpg"
+                                            src="assets/images/catalog/dress-10.jpg" />
+                                    </a>
+                                    <a data-zoom-id="Zoom-1" href="assets/images/catalog/dress-13.jpg"
+                                        data-image="assets/images/catalog/dress-13.jpg"
+                                        data-zoom-image-2x="assets/images/catalog/dress-13.jpg"
+                                        data-image-2x="assets/images/catalog/dress-13.jpg">
+                                        <img srcset="assets/images/catalog/dress-13.jpg"
+                                            src="assets/images/catalog/dress-13.jpg" />
+                                    </a>
+                                    <a data-zoom-id="Zoom-1" href="assets/images/catalog/dress-14.jpg"
+                                        data-image="assets/images/catalog/dress-14.jpg"
+                                        data-zoom-image-2x="assets/images/catalog/dress-14.jpg"
+                                        data-image-2x="assets/images/catalog/dress-14.jpg">
+                                        <img srcset="assets/images/catalog/dress-14.jpg 2x"
+                                            src="assets/images/catalog/dress-14.jpg" />
+                                    </a>
+                                    <a data-zoom-id="Zoom-1" href="assets/images/catalog/dress-15.jpg"
+                                        data-image="assets/images/catalog/dress-15.jpg"
+                                        data-zoom-image-2x="assets/images/catalog/dress-15.jpg"
+                                        data-image-2x="assets/images/catalog/dress-15.jpg">
+                                        <img srcset="assets/images/catalog/dress-15.jpg 2x"
+                                            src="assets/images/catalog/dress-15.jpg" />
+                                    </a>
+                                    <a data-zoom-id="Zoom-1" href="assets/images/catalog/dress-16.jpg"
+                                        data-image="assets/images/catalog/dress-16.jpg"
+                                        data-zoom-image-2x="assets/images/catalog/dress-16.jpg"
+                                        data-image-2x="assets/images/catalog/dress-16.jpg">
+                                        <img srcset="assets/images/catalog/dress-16.jpg 2x"
+                                            src="assets/images/catalog/dress-16.jpg" />
+                                    </a>
+                                    <a data-zoom-id="Zoom-1" href="assets/images/catalog/dress-17.jpg"
+                                        data-image="assets/images/catalog/dress-17.jpg"
+                                        data-zoom-image-2x="assets/images/catalog/dress-17.jpg"
+                                        data-image-2x="assets/images/catalog/dress-17.jpg">
+                                        <img srcset="assets/images/catalog/dress-17.jpg 2x"
+                                            src="assets/images/catalog/dress-17.jpg" />
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 ps-lg-0">
+                            <div style="height: 30px; width: 90px;"
+                                class="border rounded-1 fs-nm d-flex align-items-center justify-content-center mb-2">
+                                -25% Off
+                            </div>
+                            <h3 class="fw-bld text-blue">Summer Collection Women Unstitched</h3>
+                            <div class="d-flex">
+                                <div class="text-warning fs-sm me-3">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="mb-2 fs-sm text-secondary">0 reviews | Write a review</p>
+                            </div>
+                            <div class="d-flex align-items-center fs-nm mb-2">
+                                <span class="m-0 fs-nm me-2">Availability:</span><span class="text-success"><i
+                                        class="fas fa-check-circle me-1"></i>Instock</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <h5 class="fw-bold text-pink m-0 me-2">Rs. 2,400 /-</h5>
+                                <del class="text-secondary fs-sm">Rs. 3,000 /-</del>
+                            </div>
+                            <hr>
+                            <div style="border-left: 4px solid var(--pink);" class="ps-2">
+                                <div class="pb-2 fs-nm">
+                                    <strong class="">Ex Tax: </strong><span class="text-secondary">Rs. 200
+                                        /-</span>
+                                </div>
+                                <div class="pb-2 fs-nm">
+                                    <strong class="">Brand: </strong><span class="text-secondary">Khaadi</span>
+                                </div>
+                                <div class="pb-2 fs-nm">
+                                    <strong class="">Product Code: </strong><span
+                                        class="text-secondary">PRS230098</span>
+                                </div>
+                                <div class="pb-2 fs-nm">
+                                    <strong class="">Delivery Charges: </strong><span class="text-secondary">Rs. 200
+                                        /-</span>
+                                </div>
+                            </div>
+                            <div class="mt-2 d-flex social">
+                                <span class="fw-bold text-blue me-3">Social Share :</span>
+                                <a href="" class="text-decoration-none btn-pink fs-nm me-2">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="" class="text-decoration-none btn-pink fs-nm me-2">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="" class="text-decoration-none btn-pink fs-nm me-2">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="" class="text-decoration-none btn-pink fs-nm me-2">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="mt-2">
+                                <span class="fw-bold text-blue me-3">
+                                    Quantity :
+                                </span>
+                                <div class="mt-2">
+                                    <input class="inc-dec form-control w-25" type="text" value="1" />
+                                </div>
+                                <div class="mt-4">
+                                    <a href="cart.html" class="btn btn-pink me-2"><i
+                                            class="fas fa-shopping-basket me-1"></i>Cart
+                                        Now</a>
+                                    <button class="btn btn-pink me-2"><i class="fas fa-heart"></i></button>
+                                    <button class="btn btn-pink"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <p class="fw-bold text-blue me-3">Guarrented safe check:</p>
+                                <img src="assets/images/icon/payment-2.png" alt="" width="310">
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link p-0 me-4 py-3 mb-2 active a-pink fw-normal" id="description-tab"
+                                data-bs-toggle="tab" data-bs-target="#description-tab-pane" type="button" role="tab"
+                                aria-controls="description-tab-pane" aria-selected="true">Description</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link p-0 me-4 py-3 mb-2 a-pink fw-normal" id="trending-tab"
+                                data-bs-toggle="tab" data-bs-target="#review-tab-pane" type="button" role="tab"
+                                aria-controls="review-tab-pane" aria-selected="false">Product Reviews</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link p-0 me-4 py-3 mb-2 a-pink fw-normal" id="info-tab"
+                                data-bs-toggle="tab" data-bs-target="#info-tab-pane" type="button" role="tab"
+                                aria-controls="info-tab-pane" aria-selected="false">Aditional Info</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="description-tab-pane" role="tabpanel"
+                            aria-labelledby="description-tab" tabindex="0">
+                            <p class="fw-bold mb-2">Product Title :</p>
+                            <p class="text-secondary lh-lg fs-nm" style="text-align: justify;">Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit. Saepe voluptatibus in dolore quisquam sit quae ex,
+                                quis vero dolor exercitationem voluptate possimus architecto tempore minima doloremque
+                                reiciendis excepturi porro adipisci praesentium debitis. Natus possimus deleniti quaerat
+                                consectetur quas soluta, animi, id iure eum, minima nesciunt culpa eius adipisci dolore
+                                provident eveniet! Rerum suscipit tempora in </p>
+                            <p class="fw-bold mb-2">More Details :</p>
+                            <ol class="ps-3 fs-nm">
+                                <li class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit officiis
+                                    sint enim
+                                    temporibus quis quaerat illum quam vero doloribus nam!</li>
+                                <li class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit officiis
+                                    sint enim Lorem ipsum dolor sit amet.
+                                    temporibus quis quaerat illum quam vero doloribus nam!</li>
+                                <li class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit officiis
+                                    sint enim
+                                    temporibus quis quaerat illum quam vero doloribus nam!</li>
+                                <li class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit officiis
+                                    sint enim Lorem ipsum dolor sit amet.
+                                    temporibus quis quaerat illum quam vero doloribus nam!</li>
+                                <li class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit officiis
+                                    sint enim
+                                    temporibus quis quaerat illum quam vero doloribus nam!</li>
+                            </ol>
+                        </div>
+                        <div class="tab-pane fade" id="review-tab-pane" role="tabpanel" aria-labelledby="review-tab"
+                            tabindex="0">
+                            <div class="card border-0 rounded-0">
+                                <div class="card-header rounded-0 bg-transparent">
+                                    <h5 class="fw-bold">Customer Reviews</h5>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="text-warning fs-nm mb-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span class="text-pink ms-3 fs-nm">Based on 2 reviews</span>
+                                        </div>
+                                        <a href="#writereview" class="btn btn-pink">Write a Review</a>
+                                    </div>
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="d-flex align-items-center border-bottom py-3">
+                                        <div
+                                            style="min-height: 80px; min-width: 80px; border-radius: 50%; background-image: url('assets/images/profile/profile.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                        </div>
+                                        <div class="ms-3">
+                                            <p class="fw-bold mb-1">Richard Smith</p>
+                                            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                                                <div class="text-warning fs-sm mb-1">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                                <span style="height: 35px; width: 140px;"
+                                                    class="border d-flex align-items-center justify-content-center rounded-1 fs-nm">25
+                                                    Feb, 2025</span>
+                                            </div>
+                                            <p class="text-secondary fs-nm m-0">Lorem ipsum, dolor sit amet consectetur
+                                                adipisicing elit. Dolor officiis, eius, praesentium facilis reiciendis
+                                                quae, tempora modi expedita</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center border-bottom py-3">
+                                        <div
+                                            style="min-height: 80px; min-width: 80px; border-radius: 50%; background-image: url('assets/images/profile/profile.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                        </div>
+                                        <div class="ms-3">
+                                            <p class="fw-bold mb-1">Richard Smith</p>
+                                            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                                                <div class="text-warning fs-sm mb-1">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                                <span style="height: 35px; width: 140px;"
+                                                    class="border d-flex align-items-center justify-content-center rounded-1 fs-nm">25
+                                                    Feb, 2025</span>
+                                            </div>
+                                            <p class="text-secondary fs-nm m-0">Lorem ipsum, dolor sit amet consectetur
+                                                adipisicing elit. Dolor officiis, eius, praesentium facilis reiciendis
+                                                quae, tempora modi expedita</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center border-bottom py-3">
+                                        <div
+                                            style="min-height: 80px; min-width: 80px; border-radius: 50%; background-image: url('assets/images/profile/profile.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                        </div>
+                                        <div class="ms-3">
+                                            <p class="fw-bold mb-1">Richard Smith</p>
+                                            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                                                <div class="text-warning fs-sm mb-1">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                                <span style="height: 35px; width: 140px;"
+                                                    class="border d-flex align-items-center justify-content-center rounded-1 fs-nm">25
+                                                    Feb, 2025</span>
+                                            </div>
+                                            <p class="text-secondary fs-nm m-0">Lorem ipsum, dolor sit amet consectetur
+                                                adipisicing elit. Dolor officiis, eius, praesentium facilis reiciendis
+                                                quae, tempora modi expedita</p>
+                                        </div>
+                                    </div>
+                                    <form action="" id="writereview">
+                                        <h5 class="fw-bold mt-3">Add a Review:</h5>
+                                        <div class="row">
+                                            <div class="col-md-12 mb-3">
+                                                <textarea name="" class="form-control" id="" rows="6"
+                                                    placeholder="Your Comment..."></textarea>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <input type="text" name="" id="" class="form-control"
+                                                    placeholder="Enter your name">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <input type="email" name="" id="" class="form-control"
+                                                    placeholder="Enter email address">
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="btn btn-pink">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="info-tab-pane" role="tabpanel" aria-labelledby="info-tab"
+                            tabindex="0">
+                            <p class="fw-bold mb-2">Lorem ipsum dolor sit amet. :</p>
+                            <p class="text-secondary lh-lg fs-nm" style="text-align: justify;">Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit. Saepe voluptatibus in dolore quisquam sit quae ex,
+                                quis vero dolor exercitationem voluptate possimus architecto tempore minima doloremque
+                                reiciendis excepturi porro adipisci praesentium debitis. Natus possimus deleniti quaerat
+                                consectetur quas soluta, animi, id iure eum, minima nesciunt culpa eius adipisci dolore
+                                provident eveniet! Rerum suscipit tempora in </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mb-3">
+                    <h3 class="fw-bld text-black text-center mb-0">Recently View</h3>
+                    <img src="assets/images/common/heading-shape.png" alt="" width="200">
+                </div>
+                <div class="col-md-4 col-xl-3 mb-3">
+                    <div class="product-card position-relative">
+                        <div class="sale-badge position-absolute m-2 z-1 bg-pink px-2 rounded-1 fs-nm fw-light">
+                            -25%</div>
+                        <div class="product-image-container">
+                            <div class="flip-wrapper">
+                                <img src="assets/images/catalog/dress-11.jpg" alt="Front Image" class="img-front">
+                                <img src="assets/images/catalog/dress-10.jpg" alt="Back Image" class="img-back">
+                            </div>
+                            <div class="icon-overlay position-absolute d-flex flex-column">
+                                <a class="d-flex align-items-center justify-content-center rounded-1 btn btn-pink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                                <a class="d-flex align-items-center justify-content-center rounded-1 btn btn-pink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                                <a class="d-flex align-items-center justify-content-center rounded-1 btn btn-pink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
+                                    <i class="fas fa-random"></i>
+                                </a>
+                                <a class="d-flex align-items-center justify-content-center rounded-1 btn btn-pink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="View Details">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="py-2 fs-nm border-bottom">
+                            <p class="text-secondary mb-1">Jacket, Women</p>
+                            <a href="product-detail.html" class="text-decoration-none a-pink">
+                                <h6 class="fw-bold mb-1">Summer Light Denim Jacket</h6>
+                            </a>
+                            <div class="text-warning fs-sm mb-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p class="mb-1 text-secondary fw-light"><span class="text-black fw-bold">Price
+                                    :&nbsp;</span>Rs. 8,900<del class="ms-2">5,600</del></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xl-3 mb-3">
+                    <div class="product-card position-relative">
+                        <div class="sale-badge position-absolute m-2 z-1 bg-pink px-2 rounded-1 fs-nm fw-light">
+                            Sale</div>
+                        <div class="product-image-container">
+                            <div class="flip-wrapper">
+                                <img src="assets/images/catalog/dress-5.jpg" alt="Front Image" class="img-front">
+                                <img src="assets/images/catalog/dress-4.jpg" alt="Back Image" class="img-back">
+                            </div>
+                            <div class="icon-overlay position-absolute d-flex flex-column">
+                                <a class="d-flex align-items-center justify-content-center rounded-1 btn btn-pink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                                <a class="d-flex align-items-center justify-content-center rounded-1 btn btn-pink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                                <a class="d-flex align-items-center justify-content-center rounded-1 btn btn-pink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
+                                    <i class="fas fa-random"></i>
+                                </a>
+                                <a class="d-flex align-items-center justify-content-center rounded-1 btn btn-pink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="View Details">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="py-2 fs-nm border-bottom">
+                            <p class="text-secondary mb-1">Jacket, Women</p>
+                            <a href="product-detail.html" class="text-decoration-none a-pink">
+                                <h6 class="fw-bold mb-1">Summer Light Denim Jacket</h6>
+                            </a>
+                            <div class="text-warning fs-sm mb-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p class="mb-1 text-secondary fw-light"><span class="text-black fw-bold">Price
+                                    :&nbsp;</span>Rs. 8,900<del class="ms-2">5,600</del></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xl-3 mb-3">
+                    <div class="product-card position-relative">
+                        <div class="product-image-container">
+                            <div class="flip-wrapper">
+                                <img src="assets/images/catalog/dress-7.jpg" alt="Front Image" class="img-front">
+                                <img src="assets/images/catalog/dress-6.jpg" alt="Back Image" class="img-back">
+                            </div>
+                            <div class="icon-overlay position-absolute d-flex flex-column">
+                                <a class="d-flex align-items-center justify-content-center rounded-1 btn btn-pink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                                <a class="d-flex align-items-center justify-content-center rounded-1 btn btn-pink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                                <a class="d-flex align-items-center justify-content-center rounded-1 btn btn-pink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
+                                    <i class="fas fa-random"></i>
+                                </a>
+                                <a class="d-flex align-items-center justify-content-center rounded-1 btn btn-pink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="View Details">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="py-2 fs-nm border-bottom">
+                            <p class="text-secondary mb-1">Jacket, Women</p>
+                            <a href="product-detail.html" class="text-decoration-none a-pink">
+                                <h6 class="fw-bold mb-1">Summer Light Denim Jacket</h6>
+                            </a>
+                            <div class="text-warning fs-sm mb-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p class="mb-1 text-secondary fw-light"><span class="text-black fw-bold">Price
+                                    :&nbsp;</span>Rs. 8,900<del class="ms-2">5,600</del></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xl-3 mb-3">
+                    <div class="product-card position-relative">
+                        <div class="sale-badge position-absolute m-2 z-1 bg-pink px-2 rounded-1 fs-nm fw-light">
+                            Sale</div>
+                        <div class="product-image-container">
+                            <div class="flip-wrapper">
+                                <img src="assets/images/catalog/dress-9.jpg" alt="Front Image" class="img-front">
+                                <img src="assets/images/catalog/dress-8.jpg" alt="Back Image" class="img-back">
+                            </div>
+                            <div class="icon-overlay position-absolute d-flex flex-column">
+                                <a class="d-flex align-items-center justify-content-center rounded-1 btn btn-pink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                                <a class="d-flex align-items-center justify-content-center rounded-1 btn btn-pink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                                <a class="d-flex align-items-center justify-content-center rounded-1 btn btn-pink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
+                                    <i class="fas fa-random"></i>
+                                </a>
+                                <a class="d-flex align-items-center justify-content-center rounded-1 btn btn-pink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" title="View Details">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="py-2 fs-nm border-bottom">
+                            <p class="text-secondary mb-1">Jacket, Women</p>
+                            <a href="product-detail.html" class="text-decoration-none a-pink">
+                                <h6 class="fw-bold mb-1">Summer Light Denim Jacket</h6>
+                            </a>
+                            <div class="text-warning fs-sm mb-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p class="mb-1 text-secondary fw-light"><span class="text-black fw-bold">Price
+                                    :&nbsp;</span>Rs. 8,900<del class="ms-2">5,600</del></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="bg-black text-white pt-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <h5 class="border-bottom pb-2">About Us</h5>
+                    <p class="small">Lorem ipsum dolor sit amet, consectetur adipisici ti elit seddo eiusmod tempor
+                        incididunt utlabore et dolore magna aliqua enim ad minim veniam quisnostrud exercitation ullamco
+                    </p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5 class="border-bottom pb-2">My Account</h5>
+                    <ul class="list-unstyled small">
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">My Account</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Shopping Cart</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Login</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Register</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Checkout</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Wishlist</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5 class="border-bottom pb-2">Categories</h5>
+                    <ul class="list-unstyled small">
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Portfolio</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Compare</a></li>
+                        <li class="pb-2"><a href="#" class="text-white text-decoration-none">Frequently</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h5 class="border-bottom pb-2">Instagram</h5>
+                    <div class="row g-2">
+                        <div class="col-6 col-md-4"><img src="assets/images/catalog/dress-1.jpg" alt="" width="100%">
+                        </div>
+                        <div class="col-6 col-md-4"><img src="assets/images/catalog/dress-5.jpg" alt="" width="100%">
+                        </div>
+                        <div class="col-6 col-md-4"><img src="assets/images/catalog/dress-8.jpg" alt="" width="100%">
+                        </div>
+                        <div class="col-6 col-md-4"><img src="assets/images/catalog/dress-11.jpg" alt="" width="100%">
+                        </div>
+                        <div class="col-6 col-md-4"><img src="assets/images/catalog/dress-12.jpg" alt="" width="100%">
+                        </div>
+                        <div class="col-6 col-md-4"><img src="assets/images/catalog/dress-15.jpg" alt="" width="100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5 class="border-bottom pb-2">Newsletter</h5>
+                    <p class="small">Fill their seed open meat. Sea you great Saw image stl</p>
+                    <form>
+                        <div class="mb-2">
+                            <input type="email" class="form-control" placeholder="Email Address">
+                        </div>
+                        <button class="btn btn-pink w-100">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Bottom Section -->
+            <div class="border-top py-2 mt-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p class="small mb-2 mb-md-0">Copyright © 2025 <a href="index.html"
+                        class="text-decoration-none text-pink">Bazario</a>. All Rights Reserved.</p>
+                <div class="d-flex gap-2">
+                    <img src="assets/images/icon/payment-visa-card.png" alt="Visa" height="30" width="100%">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/jquery.js"></script>
+    <script src="assets/libs/magiczoomplus/magiczoomplus.js"></script>
+    <script src="assets/libs/inc-dec-counter/userincr.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</body>
+
+</html>
